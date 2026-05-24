@@ -1,12 +1,12 @@
 from pydantic import BaseModel
 
-# =========================================================
 
+# Simple response used by the gateway /models endpoint.
 class ModelsResponse(BaseModel):
     models: list[str]
 
-# =========================================================
 
+# FastTranscribe provider.
 class FastTranscribeRequest(BaseModel):
     audio_data: str
     lang: str
@@ -19,8 +19,8 @@ class FastTranscribeResponse(BaseModel):
     confidence_score: int
     processing_ms: int
 
-# =========================================================
 
+# AccurateSTT provider.
 class AccurateSTTRequest(BaseModel):
     audio_file: str
     language_code: str
@@ -32,8 +32,8 @@ class AccurateSTTResponse(BaseModel):
     confidence: float
     duration_sec: float
 
-# =========================================================
 
+# Gateway.
 class GatewayRequest(BaseModel):
     audio_url: str
     provider: str | None = None
