@@ -7,7 +7,7 @@ The biggest decision I made was to keep the gateway and the two fake providers a
 
 ## 2. Most confusing or frustrating part
 
-The most confusing and frustrating part was having to research and understand concepts that were new to me. I had to learn how a REST API is structured, how different services connect through different ports, and how endpoints are defined. Another confusing part was deciding how to handle AccurateSTT's `duration_sec` field, because the gateway response requires `processing_time_ms`, in the end, I decided to measure the provider call directly in the gateway and use that value as the processing time.
+The most confusing and frustrating part was having to research and understand concepts that were new to me. I had to learn how a REST API is structured, how different services connect through different ports, and how endpoints are defined. Another confusing part was deciding how to handle AccurateSTT's `duration_sec` field, because the gateway response requires `processing_time_ms`. In the end, I decided to measure the provider call directly in the gateway and use that value as the processing time.
 
 
 ## 3. Three things I would change first to add a third provider
